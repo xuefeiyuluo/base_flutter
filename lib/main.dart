@@ -4,6 +4,7 @@ import 'package:base_flutter/demo/BottomNavigationBarDemo.dart';
 import 'package:base_flutter/demo/ListViewDemo.dart';
 import 'package:base_flutter/demo/OtherDemo.dart';
 import './demo/BasicDemo.dart';
+import './demo/LayoutDemo.dart';
 
 void main() => runApp(App());
 
@@ -59,7 +60,7 @@ class Home extends StatelessWidget {
             children: [
               ListViewDemo(),
               BasicDemo(),
-              Icon(Icons.directions_bike,size: 256,color: Colors.black12),
+              LayoutDemo(),
             ],
           ),
           drawer: DrawerDemo(),
