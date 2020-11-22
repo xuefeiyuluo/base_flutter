@@ -5,6 +5,7 @@ import 'package:base_flutter/demo/ListViewDemo.dart';
 import 'package:base_flutter/demo/OtherDemo.dart';
 import './demo/BasicDemo.dart';
 import './demo/LayoutDemo.dart';
+import './demo/ViewDemo.dart';
 
 void main() => runApp(App());
 
@@ -29,9 +30,9 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-        length: 3,
+        length: 4,
         child: Scaffold(
-          backgroundColor: Colors.grey,
+          backgroundColor: Colors.white,
           appBar: AppBar(
 
             title: Text('NIHAO'),
@@ -52,6 +53,7 @@ class Home extends StatelessWidget {
                 Tab(icon: Icon(Icons.local_florist)),
                 Tab(icon: Icon(Icons.change_history)),
                 Tab(icon: Icon(Icons.directions_bike)),
+                Tab(icon: Icon(Icons.directions_boat)),
               ],
             ),
           ),
@@ -61,6 +63,7 @@ class Home extends StatelessWidget {
               ListViewDemo(),
               BasicDemo(),
               LayoutDemo(),
+              ViewDemo()
             ],
           ),
           drawer: DrawerDemo(),
