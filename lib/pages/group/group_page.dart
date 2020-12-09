@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:base_flutter/widgets/search_text_field_widget.dart';
 import 'package:base_flutter/constant/constant.dart';
+import 'package:base_flutter/bean/subject_entity.dart';
+import 'package:base_flutter/widgets/loading_widget.dart';
 
 class GroupPage extends StatelessWidget {
   @override
@@ -34,8 +36,35 @@ class _GroupWidget extends StatefulWidget {
 }
 
 class __GroupWidgetState extends State<_GroupWidget> {
+  List<Subject> list;
+  bool loading = true;
+
+  @override
+  void initState() {
+    super.initState();
+    // Future(() {
+    //   return _request.get(API.IN_THEATERS);
+    // }).then((result) {
+    //   var resultList = result['subjects'];
+    //   setState(() {
+    //     list =
+    //         resultList.map<Subject>((item) => Subject.fromMap(item)).toList();
+    //     loading = false;
+    //   });
+    // });
+  }
+
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return LoadingWidget.containerLoadingBody(_getBody(), loading: loading);
   }
+
+  Widget _getBody() {
+    if (list == null) {
+      return Container(
+        child: Image.asset(Constant.ASSETS_IMG + 'ic_group_top.png'),
+      );
+    }
+  }
+
 }
