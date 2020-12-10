@@ -12,7 +12,7 @@ class SubjectEntity {
     rank = map['rank'];
     delta = map['delta'];
     var subjectMap = map['subject'];
-    subject = Subject.fromMap(subjectMap);
+    // subject = Subject.fromMap(subjectMap);
   }
 }
 
@@ -36,31 +36,31 @@ class Subject {
   var id;
 
   ///构造函数
-  Subject.fromMap(Map<String, dynamic> map) {
-    var rating = map['rating'];
-    this.rating = Rating(rating['average'], rating['max']);
-    genres = map['genres'];
-    title = map['title'];
-    var castMap = map['casts'];
-    casts = _converCasts(castMap);
-    collect_count = map['collect_count'];
-    original_title = map['original_title'];
-    subtype = map['subtype'];
-    directors = map['directors'];
-    year = map['year'];
-    var img = map['images'];
-    images = Images(img['small'], img['large'], img['medium']);
-    alt = map['alt'];
-    id = map['id'];
-    durations = map['durations'];
-    mainland_pubdate = map['mainland_pubdate'];
-    has_video = map['has_video'];
-    pubdates = map['pubdates'];
-  }
+  // Subject.fromMap(Map<String, dynamic> map) {
+  //   var rating = map['rating'];
+  //   this.rating = Rating(rating['average'], rating['max']);
+  //   genres = map['genres'];
+  //   title = map['title'];
+  //   var castMap = map['casts'];
+  //   casts = _converCasts(castMap);
+  //   collect_count = map['collect_count'];
+  //   original_title = map['original_title'];
+  //   subtype = map['subtype'];
+  //   directors = map['directors'];
+  //   year = map['year'];
+  //   var img = map['images'];
+  //   images = Images(img['small'], img['large'], img['medium']);
+  //   alt = map['alt'];
+  //   id = map['id'];
+  //   durations = map['durations'];
+  //   mainland_pubdate = map['mainland_pubdate'];
+  //   has_video = map['has_video'];
+  //   pubdates = map['pubdates'];
+  // }
 
-  _converCasts(casts) {
-    return casts.map<Cast>((item)=>Cast.fromMap(item)).toList();
-  }
+  // _converCasts(casts) {
+  //   return casts.map<Cast>((item)=>Cast.fromMap(item)).toList();
+  // }
 
 }
 
